@@ -1,0 +1,10 @@
+.b{
+    color: red;
+    text-align: center;
+    border: 2px solid green;
+    background-color: black;
+    text-transform: uppercase;
+    text-shadow: 2px 5px 5px green;
+    border-radius: 10px;
+    font-family: sans-serif;
+}   
