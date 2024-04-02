@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .navbar {
+        height: 10vh;
+        border: 2px solid black;
+        display: flex;
+        justify-content: space-around;
+      }
+      .logo img{
+        width: 200px;
+        height: 50px;
+        /* border: 2px solid black; */
+      }
+      .left{
+        display: flex;
+        align-items: center ;
+      }
+      .input .inp{
+        width: 300px;
+        height: 50px;
+        border-radius: 6px;
+        margin: 5px 10px;
+        padding: 25px 10px;
+        border: 1px solid black;
+        font-size: 20px;
+
+      }
+      .right ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .right ul li{
+        list-style: none;
+        margin: 10px;
+        padding: 10px;
+        font-size: 20px;
+      }
+      .app{
+        border-right: 2px solid black;
+      }
+      .become{
+        border-right: 2px solid black;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="left">
+        <div class="logo">
+            <img src="https://www.meesho.com/assets/svgicons/meeshoLogo.svg" alt="">
+        </div>
+        <div class="input">
+            <input type="text" name="" id="" class="inp" placeholder="Try,saree,kurti or search by product code">
+        </div>
+      </div>
+      <div class="right">
+        <ul>
+            <li class="app">Download App</li>
+            <li class="become">Become a Supplier</li>
+            <li>Newsroom</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
