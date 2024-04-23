@@ -435,6 +435,74 @@
             color: rgb(229, 178, 112);
         }
 
+        /* latest blog csss */
+        .latest-blog-post{
+            width: 80%;
+            height: 20vh;
+            margin: auto;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .blog-left h1{
+            font-style: italic;
+            color: gray;
+        }
+        .blog-right button{
+            padding: 15px 40px;
+            background-color: white;
+            border: none;
+            border: 1px solid black;
+        }
+        #read1{
+            color: gray;
+            margin-right: 5px;
+        }
+        .blog-right button:hover{
+            background-color: black;
+            cursor: pointer;
+        }
+        .latest-blog-post-images{
+            height: 80vh;
+            /* border: 2px solid black; */
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+        }
+        .latest-blog-post-images1{
+            width: 30%;
+            /* border: 2px solid rebeccapurple; */
+            margin: 5px;
+            
+        }
+        .latest-blog-post-images1 img{
+            width: 100%;
+        }
+        .latest-blog-post-images1 p{
+            color: gray;
+        }
+        .latest-blog-post-images1 a{
+            color: gray;
+        }
+
+        /* newicons css start here */
+
+        .newicons{
+            height: 30vh;
+            border: 2px solid black;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icons2{
+            width: 25%;
+            border: 2px solid red;
+        }
     </style>
 </head>
 <body>
@@ -728,5 +796,61 @@
 
         </div>
     </div>
+    <!-- latest blog post  -->
+
+    <div class="latest-blog-post">
+        <div class="blog-left">
+            <h1>Latest Blog Post</h1>
+        </div>
+        <div class="blog-right">
+            <button> <span id="read1">READ ALL</span> <span><i class="fa-solid fa-arrow-right"></i></span></button>
+        </div>
+    </div>
+    <div class="latest-blog-post-images">
+        <div class="latest-blog-post-images1">
+            <img src="https://rafiaein.github.io/waGGy/images/blog1.jpg" alt=""><br>
+            <h3>10 Reasons to be helpful towards any animals</h3><br>
+            <p>At the core of our practice is the idea that cities are the incubators of
+                our greatest
+                achievements, and the best hope for a sustainable future.</p><br>
+                <a href="">READ MORE</a>
+        </div>
+        <div class="latest-blog-post-images1">
+            <img src="https://rafiaein.github.io/waGGy/images/blog2.jpg" alt=""><br>
+            <h3>How to know your pet is hungry</h3><br>
+            <p>At the core of our practice is the idea that cities are the incubators of
+                our greatest
+                achievements, and the best hope for a sustainable future.</p><br>
+                <a href="">READ MORE</a>
+        </div>
+        <div class="latest-blog-post-images1">
+            <img src="https://rafiaein.github.io/waGGy/images/blog3.jpg" alt="">
+            <h3>Best home for your pets</h3><br>
+            <p>At the core of our practice is the idea that cities are the incubators of
+                our greatest
+                achievements, and the best hope for a sustainable future.</p><br>
+                <a href="">READ MORE</a>
+        </div>
+    </div>
+
+    <div class="newicons">
+        <div class="icons2">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h3>Free Delivery</h3>
+        </div>
+        <div class="icons2">
+       <i class="fa-solid fa-user"></i>
+       <h3>100% secure payment</h3>
+       </div>
+        <div class="icons2">
+        <i class="fa-solid fa-comment"></i>
+        <h3>Daily offer</h3>
+        </div>
+        <div class="icons2">
+        <i class="fa-solid fa-medal"></i>
+        <h3>Quality guarantee</h3>
+        </div>
+    </div>
+
 </body>
 </html>
