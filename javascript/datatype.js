@@ -70,3 +70,13 @@
 // console.log(a++)
 // console.log(--a)
 // console.log(a)
+
+let a=5;
+if(a==5){
+    console.log("this is positive number")
+}
+else if(a==-5){
+    console.log("this is negative number")
+}
+
+
