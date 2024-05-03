@@ -291,7 +291,23 @@
             justify-content: center;
             background-color: rgb(255, 255, 255);
             border-radius: 1rem;
+            margin: 5px;
           }
+
+          .lower-services-box:hover{
+            background-color: #092661 ;
+            color: white ;
+            .lower-services-box-logo:hover i{
+            color: white;
+          }
+          }
+          .lower-services-box-logo:hover i{
+            color: white;
+          }
+          .lower-services-box-logo1:hover i{
+            color: white;
+          }
+
           .lower-services-box-content{
             width: 70%;
             /* border: 2px solid green; */
@@ -354,6 +370,70 @@
             }
           }
 
+          .destination-header{
+            /* height: 20vh; */
+            /* border: 2px solid black;  */
+            width: 80%;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h1{
+              font-size: 2.8rem;
+            }
+          }
+          .destination-header-div{
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            hr{
+              width: 10%;
+            }
+            h5{
+              font-size: 1.5rem;
+              margin-left: 10px;
+              margin-right: 10px;
+              color: #092661;
+              margin-bottom: 10px;
+            }
+          }
+
+          .destination-city{
+            /* height: 16vh;
+            border: 2px solid black; */
+            width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            ul{
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+              li{
+                list-style-type: none;
+                margin: 30px;
+                button{
+                  padding: 15px 30px;
+                  background-color: white;
+                  color: #092661;
+                  border-radius: 30px;
+                }
+                
+              } 
+            }
+          }
+          #all1{
+            background-color: #092661;
+            color: white;
+          }
+          .destination-city ul li button:hover{
+            cursor: pointer;
+          }
           
     </style>
   </head>
@@ -514,6 +594,30 @@
       <div class="service-more">
         <button>Service More</button>
       </div>
+    </div>
+
+    <!-- destination page start here -->
+
+    <div class="destination-header">
+      <div class="destination-header-div">
+        <hr>
+        <h5>DESTINATION</h5>
+        <hr>
+      </div>
+      <h1>Popular Destination
+      </h1>
+    </div>
+
+    <div class="destination-city">
+      <ul>
+        <li><button id="all1">ALL</button></li>
+        <li><button>USA</button></li>
+        <li><button>CANADA</button></li>
+        <li><button>CHINA</button></li>
+        <li><button>EUROPE</button></li>
+        <li><button>SINGAPORE</button></li>
+
+      </ul>
     </div>
   </body>
 </html>
