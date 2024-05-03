@@ -1,81 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-        .header1{
-            /* height: 10vh; */
+          *{
+              margin: 0px;
+              padding: 0px;
+              box-sizing: border-box;
+          }
+          .header1{
+              /* height: 10vh; */
+              background-color: #092661;
+              display: flex;
+              justify-content: space-between;
+          }
+          .left-header1{
+              width: 70%;
+          }
+          .left-header1 ul{
+              display: flex;
+              align-items: center;
+              margin-left: 20px;
+          }
+          .left-header1 ul li{
+              color: white;
+              padding: 10px;
+              font-size: 15px;
+              border: 1px solid white;
+              border-radius: 1.25rem;
+              margin: 5px;
+              list-style-type: none;
+              /* margin-left: 20px; */
+          }
+          .right-header1 ul{
+              display: flex;
+              align-items: center;
+              margin-right: 20px  ;
+          }
+          .right-header1 ul li{
+              color: white;
+              padding: 10px;
+              margin: 3px;
+              list-style-type: none;
+          }
+          .right-header1 ul li i{
+              margin: 3px;
+          }
+          .header2{
+              height: 20vh;
+              background-color: ;
+          }
+
+          .carousel-image{
+              height: 100vh;
+              background-image: url("https://themewagon.github.io/travela/img/carousel-2.jpg");
+              background-size: cover;
+          }
+          .header2{
+              height: 15vh;
+              /* border: 2px solid black; */
+              width: 90%;
+              margin: auto;
+              display: flex;
+              justify-content: space-between;
+          }
+          .left-header2{
+              display: flex;
+              width: 20%;
+              /* border: 2px solid red; */
+              justify-content: center;
+              align-items: center; */
+
+          }
+          .left-header2 i{
+              font-size: 40px;
+              color: white;
+              margin-right: 10px;
+          }
+          .right-header2{
+              display: flex;
+          }
+          .right-header2 ul{
+              /* width: 80%; */
+              /* height: 80vh; */
+              /* border: 2px solid black; */
+              display: flex;
+
+          }
+          .right-header2 ul li{
+              list-style-type: none;
+              padding: 28px;
+              font-size: 20px;
+          }
+          .right-header2 button{
+              padding: 0px 30px;
+              border-radius: 3.25rem;
+              padding: 5px 30px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+              border: none;
+              background-color: #092661;
+              color: white;
+          }
+          .right-header2 button:hover{
+              cursor: pointer;
+              background-color: white;
+              color: black;
+          }
+          .content{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              margin: 20px;
+              padding: 20px;
+              width: 80%;
+              margin: auto;
+              margin-top: 50px;
+          }
+          .content h2{
+              margin-top: 50px;
+              font-size: 50px;
+              /* color: white; */
+          }
+          .content p{
+              font-size: 20px;
+              margin-top: 50px;
+              margin-bottom: 50px;
+          }
+          #discover-butt{
+              padding: 20px 60px;
+              background-color: #092661;
+              border: none;
+              color: white;
+              border-radius: 2rem;
+              transition:
+                 background-color 2s,
+                 transition-duration: 1s;
+  /* transition-delay: 1s; */
+                 
+          }
+          #discover-butt:hover{
+              cursor: pointer;
+              background-color: white;
+              color: black;
+              background-color: white;
+          }
+
+          .about-us{
+            height: 100vh;
+            /* border: 2px solid black; */
+            width: 80%;
+            margin: auto;
+            display:  flex;
+          }
+          .about-us-image{
+            width: 35%;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .about-us-content{
+            width: 65%;
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            justify-content: center;
+          }
+          .about-us-image img{
+            width: 80%;
+          }
+
+          .about-us-content h2{
+            color: #092661;
+            margin-bottom: 10px;
+            font-size: 20px;
+
+          }
+          .about-us-content h1{
+            margin-bottom: 20px;
+            font-size: 40px;
+
+          }
+          #welcome{
+            color: #092661;
+          }
+          .about-us-content p{
+            margin-bottom: 20px;
+          }
+          #span1{
+            margin-left: 40px;
+          }
+          #span2{
+            margin-right: 110px;
+          }
+          #span3{
+            margin-left: 40px;
+          }
+          #span4{
+            margin-right: 90px;
+          }
+          .about-us-content p i{
+            color:#092661;
+            margin-right: 7px;
+          }
+          #span5{
+            margin-left: 40px;
+          }
+          #span6{
+            margin-right: 90px;
+          }
+
+          #readmore{
+            padding: 20px 70px;
             background-color: #092661;
-            display: flex;
-            justify-content: space-between;
-        }
-        .left-header1{
-            width: 70%;
-        }
-        .left-header1 ul{
-            display: flex;
-            align-items: center;
-            margin-left: 20px;
-        }
-        .left-header1 ul li{
+            margin-top: 50px;
+            border-radius: 50px;
             color: white;
-            padding: 10px;
-            font-size: 15px;
-            border: 1px solid white;
-            border-radius: 1.25rem;
-            margin: 5px;
-            list-style-type: none;
-            /* margin-left: 20px; */
-        }
-        .right-header1 ul{
-            display: flex;
-            align-items: center;
-            margin-right: 20px  ;
-        }
-        .right-header1 ul li{
-            color: white;
-            padding: 10px;
-            margin: 3px;
-            list-style-type: none;
-        }   
-        .right-header1 ul li i{
-            margin: 3px;
-        }
-        .header2{
+          }
+          #readmore:hover{
+            cursor: pointer;
+            color: #092661;
+            background-color: white;
+            
+          }
+
+          /* services css start here */
+          .services{
+            height: 100vh;
+            /* border: 2px solid black; */
+            width: 80%;
+            margin: auto;
+          }
+          .uppper-services{
             height: 20vh;
-            background-color: ;
-        }
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+          }
+          .uppper-services h5{
+            font-size: 25px;
+            color: #092661;
+            /* border: 2px solid black; */
+            /* border-right: 3px solid black; */
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+          .div5{
+            /* border: 2px solid red; */
+            display: flex;
+            width:50%;
+            align-items: center;
+            justify-content: center   ;
+            hr{
+              width: 10%;
+            }
+          }
+          .uppper-services h1{
+            font-size: 50px;
+          }
+          .lower-services{
+            height: 80vh;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction:column;
+          }
+
+          .lower-services-box{
+            height: 150px;
+            width: 500px;
+            border: 1px solid black;    
+            display: flex;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+            border-radius: 1rem;
+          }
+          .lower-services-box-content{
+            width: 70%;
+            /* border: 2px solid green; */
+            h5{
+              font-size: 1.5rem;
+              text-align: right ;
+              margin-bottom: 1rem;
+            }
+          }
+          .lower-services-box-logo{
+            width: 30%;
+            /* border: 2px solid gray; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+              font-size: 5rem;
+              color: #092661;
+            }
+          }
+          .lower-services-box-logo1{
+            width: 30%;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+              font-size: 5rem;
+              color: #092661;
+            }
+          }
+          .lower-services-box-content1{
+            width: 70%;
+            /* border: 2px solid green; */
+            h5{
+              font-size: 1.5rem;
+              text-align: left ;
+              margin-bottom: 1rem;
+            }
+          }
+          .service-more{
+            height: 10vh;
+            display: flex;
+            /* border: 2px solid black; */
+            justify-content: center;
+            align-items: center;
+            button{
+              padding: 15px 50px;
+              background-color: #092661;
+              color: white;
+              border-radius: 30px;
+              font-size: 1rem;
+
+            }
+            button:hover{
+              cursor: pointer;
+              background-color: white;
+              color: #092661;
+
+            }
+          }
+
+          
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header1">
-        <div class="left-header1">
-            <ul>
-                <li><i class="fa-brands fa-twitter"></i></li>
-                <li><i class="fa-brands fa-facebook"></i></li>
-                <li><i class="fa-brands fa-linkedin"></i></li>
-                <li><i class="fa-brands fa-instagram"></i></li>
-                <li><i class="fa-brands fa-youtube"></i></li>
-            </ul>
-        </div>
-        <div class="right-header1">
-            <ul>
-                <li><span><i class="fa-solid fa-user"></i></span><span> register</span></li>
-                <li><span><i class="fa-solid fa-right-to-bracket"></i></span><span>Login</span></li>
-                <li><span><i class="fa-solid fa-house"></i></span><span>My Dashboard</span></li>
-            </ul>
-        </div>
+      <div class="left-header1">
+        <ul>
+          <li><i class="fa-brands fa-twitter"></i></li>
+          <li><i class="fa-brands fa-facebook"></i></li>
+          <li><i class="fa-brands fa-linkedin"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+          <li><i class="fa-brands fa-youtube"></i></li>
+        </ul>
+      </div>
+      <div class="right-header1">
+        <ul>
+          <li>
+            <span><i class="fa-solid fa-user"></i></span><span> register</span>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-right-to-bracket"></i></span
+            ><span>Login</span>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-house"></i></span
+            ><span>My Dashboard</span>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <!-- header 2 start here -->
-    <div class="header2"></div>
-</body>
+    <!-- carousel image start here -->
+    <div class="carousel-image">
+      <div class="header2">
+        <div class="left-header2">
+          <span><i class="fa-solid fa-location-dot"></i></span>
+          <span><h1>Travela</h1></span>
+        </div>
+        <div class="right-header2">
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Packages</li>
+            <li>Blog</li>
+            <li>Page</li>
+            <li>Contact</li>
+          </ul>
+          <button id="header2-button">Book now</button>
+        </div>
+      </div>
+      <div class="content">
+        <h1>EXPLORE THE WORLD</h1>
+        <h2>LET'S THE WORLD TOGETHER!</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa debitis
+          alias ullam odit culpa voluptas ea possimus voluptatibus delectus nam!
+          Inventore molestiae unde omnis at.
+        </p>
+        <button id="discover-butt">Discover Now</button>
+      </div>
+    </div>
+
+    <div class="about-us">
+      <div class="about-us-image">
+        <img src="https://themewagon.github.io/travela/img/about-img.jpg" alt="">
+      </div>
+      <div class="about-us-content">
+        <h2>ABOUT US</h2>
+        <h1>Welcome to <span id="welcome">Travela</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, dolorum, doloribus sunt dicta, officia voluptatibus libero necessitatibus natus impedit quam ullam assumenda? Id atque iste consectetur. Commodi odit ab saepe!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, dolorum, doloribus sunt dicta, officia voluptatibus libero necessitatibus natus impedit quam ullam assumenda? Id atque iste consectetur. Commodi odit ab saepe!</p>
+
+        <p><span id="span1"><i class="fa-solid fa-arrow-right"></i></span><span id="span2">First Class Flight</span>      <span><i class="fa-solid fa-arrow-right"></i></span><span>Handicaped Hotels</span</p>
+
+        <p><span id="span3"><i class="fa-solid fa-arrow-right"></i></span><span id="span4">5 Star Accomodation</span>   <span><i class="fa-solid fa-arrow-right"></i></span><span>latest Model vehicle</span</p>
+
+        <p><span id="span5"><i class="fa-solid fa-arrow-right"></i></span><span id="span6">150 premium city tours</span>   <span><i class="fa-solid fa-arrow-right"></i></span><span>24/7 service</span</p><br>
+
+        <button id="readmore">Read More</button>
+      </div>
+    </div>
+
+    <!-- service page start here -->
+
+    <div class="services">
+      <div class="uppper-services">
+        <div class="div5">
+          <hr>
+          <h5>services</h5>
+          <hr>
+        </div>
+        <h1>Our services</h1>
+      </div>
+      <div class="lower-services">
+        <div class="lower-services-box">
+          <div class="lower-services-box-content">
+            <h5>World Wide Tours</h5>
+            <p>Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
+            </p>
+          </div>
+          <div class="lower-services-box-logo">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+        </div>
+        <div class="lower-services-box">
+          <div class="lower-services-box-content">
+            <h5>Travel guiedes</h5>
+            <p>Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
+            </p>
+          </div>
+          <div class="lower-services-box-logo">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+        <div class="lower-services-box">
+          <div class="lower-services-box-content">
+            <h5>Event Management  </h5>
+            <p>Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
+            </p>
+          </div>
+          <div class="lower-services-box-logo">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+        </div>
+        <div class="lower-services-box">
+          <div class="lower-services-box-logo1">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="lower-services-box-content1">
+            <h5>World Wide Tours</h5>
+            <p>Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
+            </p>
+          </div>
+        </div>
+        <div class="lower-services-box">
+          <div class="lower-services-box-logo1">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="lower-services-box-content1">
+            <h5>Travel Guide  </h5>
+            <p>Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
+            </p>
+          </div>
+        </div>
+        <div class="lower-services-box">
+          <div class="lower-services-box-logo1">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <div class="lower-services-box-content1">
+            <h5>Event Management  </h5>
+            <p>Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
+            </p>
+          </div>
+        </div>
+      
+      </div>
+      <div class="service-more">
+        <button>Service More</button>
+      </div>
+    </div>
+  </body>
 </html>
