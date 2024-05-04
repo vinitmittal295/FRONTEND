@@ -1,12 +1,66 @@
-let a=6;
-let b=7;
-let c=8;
-if(a+b>c && b+c>a && a+c>b){
-    console.log("this is triangle")
+
+
+// //   find prime number
+
+// let num = 6;
+// let flag = 0;
+
+// for (let i = 2; i < num; i++) {
+//     if (num % i == 0) {
+//         flag = 1;
+//     }
+// }
+
+// if (flag == 0) {
+//     console.log("prime");
+// } else {
+//     console.log("not prime");
+// }
+
+// // find fibbanacci
+// let a=0;
+// let b=1;
+// let c=0;
+// for(let i=0; i<5; i++){
+//     c=a+b;
+//     a=b;
+//     b=c;
+//     console.log(c)
+// }
+
+//find sum of natural number
+
+// let sum=0;
+// for(let i=0; i<=5; i++){
+//     sum=sum+i;
+// }
+// console.log(sum)
+
+// find prime number between two number
+// let start=0;
+// let end=100;
+// let flag=0
+// for(let num=start; num<=end; num++){
+//     for(let i=2; i<num; i++){
+//         if(num%i==0){ 
+//             flag=1;
+//         }
+//     }
+//     if(flag==0){
+//         console.log(num)
+//     }
+//     // else{
+//     //     console.log()
+//     // }
+// }
+
+// digit count
+let num=1234;
+let count=0;
+while(num!=0){
+    num=num/10;
+    count++;
+    // console.log(count)
 }
-if(a==b && b==c && a==c){
-    console.log("this is equilateral")
-}
-if(a!=b && b!=c){
-    console.log("this is scalene triangle")
-}
+console.log(count)
+
