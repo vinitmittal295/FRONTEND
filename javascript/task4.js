@@ -36,7 +36,7 @@
 // }
 // console.log(sum)
 
-// find prime number between two number
+// find prime number between two number not running
 // let start=0;
 // let end=100;
 // let flag=0
@@ -54,13 +54,24 @@
 //     // }
 // }
 
-// digit count
-let num=1234;
-let count=0;
-while(num!=0){
-    num=num/10;
-    count++;
-    // console.log(count)
-}
-console.log(count)
+// digit count not running
+// let num=1234;
+// let count=0;
+// while(num!=0){
+//     num=num/10;
+//     count++;
+//     // console.log(count)
+// }
+// console.log(count)
 
+// find palindrome number not running 
+
+let num=121;
+let rem=0;
+let sum=0;
+while(num>0){
+    rem=num%10;
+    sum=rem*10+sum;
+    num=num/10;
+}
+console.log(sum)
