@@ -106,4 +106,9 @@ const complexData = [
 // })
 // console.log(arr9)
 
+const filteredUsers = complexData.filter(user => 
+  user.address.country === "USA" && 
+  user.orders.some(order => order.amount > 50)
+);
 
+console.log(filteredUsers);
