@@ -23,12 +23,39 @@ const complexData = [
         country: "USA",
       },
       orders: [
-        { orderId: "C789", amount: 100.5, status: "completed" },
-        { orderId: "D012", amount: 75.2, status: "completed" },
+        { orderId: "C789", amount: 22.5, status: "completed" },
+        { orderId: "D012", amount: 7.2, status: "completed" },
       ],
     },
   ]
- 
+  // let a=complexData.map(a=>a.orders.filter(b=>b.status==="pending"))
+  // complexData.map((item)=>{
+    // if(item.address.country==="USA")
+  //     const result = item.orders.filter((elem)=>{
+  //       return elem.amount>=50;
+  //     })
+  //     if(item.address.country==="USA"&&result.amount>50){
+  //       return item;
+  //     }
+  //     // console.log(result)
+  // })
+  
+
+//   let arr=[10,20,30];
+//   let brr=arr.map(Number=>{
+//     return Number*Number
+//   })
+//   console.log(brr)
+// let crr=arr.map(num=>{
+//   return (num+1)
+// })
+// console.log(crr)
+
+// let drr=arr.map((num,index)=>{
+//   console.log(num)
+//   console.log(index)
+// })
+
 //   question no 1
 // Filter users who are aged 25 or younger.
 //   let data=complexData.filter((item)=>{
@@ -46,15 +73,13 @@ const complexData = [
 // question no 3
 
 // Filter orders with an amount greater than 50.
-
-// let data2 = complexData.map(b=>b.orders.filter(c=>c.amount>50))
-
-// console.log(data2)
+// let arr3=complexData.map(b=>b.orders.filter(c=>c.amount>50).map(e=>e.amount))
+// console.log(arr3)
 
 // question no 4 
 // Map the array to get an array of order IDs.
-// let arr3=complexData.map(a=>a.orders.map(b=>b.orderId))
-//  console.log(arr3)
+// let arr4=complexData.map(a=>a.orders.map(b=>b.orderId))
+//  console.log(arr4)
 
 //  question no 5
 // // Filter users who have at least one order with a status of 'pending'.
@@ -95,20 +120,9 @@ const complexData = [
 
 // question 8
 // Filter users who live in the 'USA' and have at least one order with an amount greater than 50.
-// let arr9=complexData.map((i)=>{
-//   return {
-//     a:i.address.country,
-//     b:i.orders.filter((c)=>{
-//       return (c.country==="USA" && c.orders.amount>50)
-//     })
-
-//   }
-// })
-// console.log(arr9)
 
 const filteredUsers = complexData.filter(user => 
   user.address.country === "USA" && 
   user.orders.some(order => order.amount > 50)
 );
-
 console.log(filteredUsers);
