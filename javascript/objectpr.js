@@ -54,3 +54,25 @@
 //   console.log(x.age)
 
 
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+  };
+  let text = "";
+  for (let x in person) {
+    text =text + person[x] + " ";
+  };
+console.log(text)
+
+const a={
+    firstName: "vinit",
+    lastName:"mittal",
+    age:34,
+
+}
+let text1="";
+for(let x in a){
+    text1=text1+a[x] + " "
+}
+console.log(text1)
