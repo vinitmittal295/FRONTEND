@@ -54,25 +54,45 @@
 //   console.log(x.age)
 
 
-const person = {
-    name: "John",
-    age: 30,
-    city: "New York"
-  };
-  let text = "";
-  for (let x in person) {
-    text =text + person[x] + " ";
-  };
-console.log(text)
+// const person = {
+//     name: "John",
+//     age: 30,
+//     city: "New York"
+//   };
+//   let text = "";
+//   for (let x in person) {
+//     text =text + person[x] + " ";
+//   };
+// console.log(text)
 
-const a={
-    firstName: "vinit",
-    lastName:"mittal",
-    age:34,
+// const a={
+//     firstName: "vinit",
+//     lastName:"mittal",
+//     age:34,
 
-}
-let text1="";
-for(let x in a){
-    text1=text1+a[x] + " "
-}
-console.log(text1)
+// }
+// let text1="";
+// for(let x in a){
+//     text1=text1+a[x] + " "
+// }
+// console.log(text1)
+
+// const car = {
+//     name: "John",
+//     age: 30,
+//     city: "New York"
+//   };
+  
+//   // Create an Array
+//   const myArray = Object.values(car);
+
+//   console.log(myArray)
+
+
+//   const bus={
+//     name:"volvo",
+//     year:2000,
+//   }
+//   const mybus=Object.values(bus)
+//   console.log(bus)
+ 
