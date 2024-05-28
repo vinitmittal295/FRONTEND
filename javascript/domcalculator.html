@@ -75,20 +75,26 @@ html, body {
       <button class="button">-</button>
     </div>
   </div>
-  <script>    
-  let b=document.querySelectorAll(".button")
-  console.log(b)
-  for(let i of b){
-    i.onclick=function(){
-        if(i.inneText=="="){
-            let inp=document.querySelector("input").value;
-            document.querySelector("input").value=eval(inp);
-            // inp=eval(inp);
-            console.log(eval(inp))
-
+  <script>
+        let b=document.querySelectorAll(".button")
+        console.log(b)
+        for(let i of b){
+            i.onclick=function(){
+                if(i.innerText=="="){
+                    let inp=document.querySelector("input").value;
+                    document.querySelector("input").value=eval(inp);
+                    console.log(eval(inp))
+                }
+                else if(i.innerText=="C"){
+                    let a=document.querySelector("input").value;
+                    document.querySelector("input").value.slice(0,-1);
+                }
+                else{
+                    document.querySelector("input").value += i.innerText;
+                }
+            }
         }
-    }
-  }
+    </script>
 </script>
 </body>
 
