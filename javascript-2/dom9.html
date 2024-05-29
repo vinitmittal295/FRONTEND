@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="hh">
+    <button id="btn">add to array</button>
+    <button id="print">print</button>
+    <h3 id="h3"></h3>
+
+
+
+    <script>
+        let arr=[];
+        document.getElementById("btn").onclick=function(){
+            let a=document.getElementById("hh").value;
+            arr.push(a);
+            document.getElementById("hh").value=""
+            console.log(arr)
+        // console.log(a);
+        
+        }
+        document.getElementById("print").onclick=function(){
+            let i=0;
+            let b=setInterval(()=>{
+                if(arr.length>i){
+                    document.getElementById("h3").innerHTML += arr[i]+ " "
+                }
+                else{
+                    clearInterval(b);
+                }
+                i++;
+            },1000);
+        }
+
+
+    </script>
+</body>
+</html>
