@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="vinit" id="name" name="name">
+    <input type="number" name="age" id="age" class="vinit">
+    <input type="email" name="email" id="email" class="vinit">
+    <textarea name="address" id="address" class="vinit"></textarea>
+
+    <button id="btn">submit</button>
+    <script>
+
+        // const user_details ={
+        //     name:'',
+        //     age:'',
+        //     email:'',
+        //     address:'',
+        // }
+        // document.getElementById("btn").onclick=function(){
+        //     let name=document.getElementById("name").value;
+        //     let age=document.getElementById("age").value;
+        //     let email=document.getElementById("email").value;
+        //     let address=document.getElementById("address").value;
+
+        //     user_details['name']=name;
+        //     user_details['age']=age;
+        //     user_details['email']=email;
+        //     user_details['address']=address;
+        //     console.log(user_details)
+
+        // }
+        const user_details ={
+            name:'',
+            age:'',
+            email:'',
+            address:'',
+        }
+        document.getElementById("btn").onclick=function(){
+            let a=document.querySelectorAll(".vinit");
+            for(let i of a){
+                user_details[i.name] = i.value;
+            }
+            console.log(user_details);
+        }
+
+
+    </script>
+
+</body>
+</html>

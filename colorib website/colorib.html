@@ -72,7 +72,134 @@
             color: white;
 
         }
+/* header 2 css start here */
+        .header-2{
+            height: 7vh;
+            border-bottom:  1px solid gray;
+            width: 80%;
+            margin:auto;
+            display: flex;
+        }
+        .left-header2{
+            width: 30%;
+            /* border: 1px solid red; */
+        }
+        .left-header2 ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li{
+                list-style-type: none;
+                /* padding: 5px; */
+
+            }
+        }
+        .middle-header2{
+            width: 30%;
+            /* border: 1px solid red; */
+        }
+        .mywish-header2{
+            width: 8%;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+        .track-header2{
+            width: 12%;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+        .right-header2{
+            width: 20%;
+            /* border: 1px solid red; */
+            display: flex;
+            align-items: center;
+            ul{
+                display: flex;
+            align-items: center;
+            justify-content: space-around;
+            }
+            li{
+                list-style-type: none;
+                i{
+                    margin: 8px;
+                    color: gray;
+                }
+                
+            }
+        }
+        .right-header2 ul li a i:hover{
+            color: red;
+        }
+
+        .header-3{
+            height: 15vh;
+            /* border: 1px solid black; */
+            width: 75%;
+            margin: auto;
+            display: flex;
+        }
+        .header-3-left{
+            width: 20%;
+            /* border: 1px solid red;    */
+            display: flex;
+            align-items: center;
+            img{
+                width: 100%;
+            }
+
+        }
+        .header-3-middle{
+            width: 65%;
+            /* border: 1px solid red; */
+            ul{
+                display: flex;
+            align-items: center;
+            justify-content: space-between;
+            li{
+                margin-top: 21px;
+                list-style-type: none;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+            }
+
+        }
+        .header-3-right{
+            width: 15%;
+            /* border: 1px solid red; */
+            ul{
+                display: flex;
+            align-items: center;
+            justify-content: space-between;
+            li{
+                list-style-type: none;
+                margin-top: 20px;
+                a{
+                    color: black;
+                    font-size: 18px;
+                    margin: 10px;
+                }
+            }
+            }
+        }
+
     </style>
+
+
 </head>
 <body>
     <div class="header1">
@@ -94,5 +221,55 @@
         </div>
     </div>
 
+    <div class="header-2">
+        <div class="left-header2">
+            <ul>
+                <li>About Us</li>
+                <li>Privacy</li>
+                <li>FAQ</li>
+                <li>Careers</li>
+            </ul>
+        </div>
+        <div class="middle-header2"></div>
+        <div class="mywish-header2">
+            <a href="">My Wishlist</a>
+        </div>
+        <div class="track-header2">
+            <a href="">Track Your Order</a>
+        </div>
+        <div class="right-header2">
+            <ul>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header-3">
+        <div class="header-3-left">
+            <img src="https://preview.colorlib.com/theme/capitalshop/assets/img/logo/logo.png.webp" alt="">
+        </div>
+        <div class="header-3-middle">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Men</a></li>
+                <li><a href="">Women</a></li>
+                <li><a href="">Baby Collection</a></li>
+                <li><a href="">Pages</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">contact</a></li>
+            </ul>
+        </div>
+        <div class="header-3-right">
+            <ul>
+                <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

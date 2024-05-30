@@ -117,6 +117,7 @@
               border: none;
               background-color: #092661;
               color: white;
+              transition: all 0.8s ease-in-out;
           }
           .right-header2 button:hover{
               cursor: pointer;
@@ -498,11 +499,55 @@
             height: 180px;
             /* border: 2px solid green; */
             margin: 20px;
+            /* transition: all 1s ease-in-out  ; */
+            background-color:#092661;
+            position: relative;
+            overflow: hidden;
+            
             
           }
           .destination-image-4-box img{
             width: 100%;
+            height: 100%;
             border-radius: 20px;
+            position: relative;
+
+          }
+          .img1content{
+            position: absolute;
+            width: 280px;
+            height: 180px;
+            /* background-color: red; */
+            transition: all 0.8s ease-in-out;
+            p{
+              color: red;
+              transition: all 0.8s ease-in-out;
+            }
+            display: none;
+            h2{
+              color: aliceblue;
+            }
+            h3{
+              color: aliceblue;
+            }
+            i{
+              color: aliceblue;
+            }
+          }
+          .destination-image-4-box:hover .img1content{
+            transform: translatey(-100px);
+            /* display: block; */
+            
+
+          }
+          .destination-image-4-box:hover{
+            transform: scale(1.1);
+            /* overflow: hidden; */
+            /* opacity: 0.8; */
+          }
+          .destination-image-4-box-image img{
+            width: 100%;
+
           }
 
     </style>
@@ -695,7 +740,14 @@
     <div class="destination-image">
       <div class="destination-image-4">
         <div class="destination-image-4-box">
-          <img src="https://themewagon.github.io/travela/img/destination-1.jpg" alt="">
+          <div class="destination-image-4-box-image"><img src="https://themewagon.github.io/travela/img/destination-1.jpg" alt="">
+          </div>
+          <div class="img1content">
+            <button>20 photos</button>
+            <h2>New York City</h2>
+            <h3>View All Place <span><i class="fa-solid fa-arrow-right"></i></span></h3>
+            <!-- <span><h3>View All Place</h3></span><span><i class="fa-solid fa-arrow-right"></i></span> -->
+          </div>  
         </div>
         <div class="destination-image-4-box">
           <img src="https://themewagon.github.io/travela/img/destination-2.jpg" alt="">
@@ -720,5 +772,8 @@
         </div> 
       </div> 
     </div>
+
+
+
   </body>
 </html>

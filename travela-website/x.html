@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 50%;
+            border: 2px solid black;
+            /* position: relative; */
+            /* overflow: hidden; */
+        }
+
+        .image{
+            height: 200px;
+            width: 200px;
+            border: 2px solid blue;
+            position: relative;
+
+        }
+        .image:hover{
+            background-color: aqua;
+        }
+        .con{
+            width: 200px;
+            height: 200px;
+            border: 2px solid green;
+            transition: all 0.8s ease-in-out;
+            position: absolute;
+        }
+        .image:hover .con{
+            transform: translateY(-100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="image"></div>
+        <div class="con"></div>
+    </div>
+</body>
+</html>

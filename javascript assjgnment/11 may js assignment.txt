@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+.container{
+    border: 2px solid black;
+    position: relative;
+    height: 100vh;
+    background-color: black;
+}
+
+            .box1 {
+                width: 30px;
+                height: 400px;
+                border: 2px solid red;
+                border-radius: 50px;
+                transition-property: background-color, border-radius, height,
+                    width;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-in-out;
+                animation-name: box1;
+                animation-duration: 0.5s;
+                animation-iteration-count: infinite;
+                position: absolute;
+                top: 100px;
+                left: 50%;
+                box-shadow: 0 0 5px red;
+            }
+
+            .box2 {
+                width: 20px;
+                height: 400px;
+                border: 2px solid red;
+                border-radius: 50px;
+                transition-property: background-color, border-radius, height,
+                    width;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-in-out;
+                animation-name: box2;
+                animation-duration: 0.5s;
+                animation-iteration-count: infinite;
+                position: absolute;
+                left: 51%;
+                top: 100px;
+                box-shadow: 0 0 5px red;
+            }
+
+                        @keyframes box1 {
+                from {
+                    transform: rotate(0deg);
+
+                }
+
+                to {
+                    transform: rotate(365deg);
+
+                }
+            }
+            @keyframes box2 {
+                from {
+                    transform: rotate(0deg);
+
+                }
+
+                to {
+                    transform: rotate(-365deg);
+
+                }
+            }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box1"></div>
+    <div class="box2"></div>
+</div>
+
+</body>
+</html>

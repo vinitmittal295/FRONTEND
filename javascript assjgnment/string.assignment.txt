@@ -1,0 +1,46 @@
+1. Reverse a String: Write a function that takes a string as input and returns the string reversed.
+
+function reverseString(str){
+    let reversed = " ";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed =reversed+ str[i];
+    }
+    return reversed;
+}
+
+console.log(reverseString("hello"));
+
+2) 2. Palindrome Check: Write a function that checks if a given string is a palindrome (reads the same forwards and backwards).
+
+function isPalindrome(str) {
+    str = str.toLowerCase();
+    let left = 0;
+    let right = str.length - 1;
+    while (left < right) {
+
+        if (str[left] !== str[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
+console.log(isPalindrome("racecar"));
+
+3. Count Vowels: Write a function that counts the number of vowels in a given string.
+
+let a = "vinit mittal";
+let count = 0;
+for (let i = 0; i < a.length; i++) {
+    if (a[i] === 'a' || a[i] === 'e' || a[i] === 'i' || a[i] === 'o' || a[i] === 'u') {
+        count++;
+    }
+}
+console.log(count);
+
+
+4. Longest Word: Write a function that finds the longest word in a sentence.
+
+
+
