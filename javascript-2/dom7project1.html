@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 600px;
+            height: 500px;
+            border: 2px solid black;
+            margin-top: 50px;
+            margin-left: 200px;
+            font-size: 30px;
+            ul{
+                display: flex;
+                justify-content: center;
+                li{
+                    color: blue;
+                }
+            }
+
+            
+        }
+        .full-div{
+            height: 100vh;
+            /* background-color: red; */
+        }
+        #btn{
+            background-color: red;
+        }
+        #btn1{
+            background-color: yellow;
+        }
+        #btn2{
+            background-color: green;
+        }
+    </style>
+</head>
+<body id="2">
+    <div class="full-div" id="1">
+        <div class="container">
+            <span>select your domain</span>
+            <select name="" id="select">
+                <option value="none">none</option>
+                <option value="aws">aws</option>
+                <option value="mern">mern</option>
+                <option value="django">django</option>
+    
+            </select>
+            <button id="btn">btn</button>
+            <button id="btn1">btn</button>
+            <button id="btn2">btn</button>
+
+    
+            <p id="p"></p>
+            <!-- <h1 id="h1"></h1>
+            <h2 id="h2"></h2> -->
+        </div>
+    
+    </div>
+    
+
+    <script>
+        document.getElementById("select").onclick=function(){
+            let a=document.getElementById("select").value;
+            console.log(a)
+
+            if(a == "aws"){
+                document.getElementById("p").innerText=
+                "Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform offered by Amazon. It provides a broad set of on-demand services such as computing power, storage options, and various tools for developers and enterprises to build, deploy, and manage applications at scale";
+            }
+            else if(a =="mern"){
+                document.getElementById("p").innerText=
+                "Node.js: A JavaScript runtime environment that allows developers to run JavaScript code outside of a web browser. Node.js is used as the server-side runtime in the MERN stack, allowing developers to build server-side logic and handle requests from clients"
+            }
+            else if(a=="django"){
+                document.getElementById("p").innerText=
+                "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It's open-source and maintained by the Django Software Foundation. Here's a breakdown of some key aspects of Django:"
+            }
+        }
+
+        document.getElementById("btn").onclick=function(){
+            document.getElementById("2").style.backgroundColor="red"
+            
+        }
+        document.getElementById("btn1").onclick=function(){
+            document.getElementById("2").style.backgroundColor="yellow"
+            
+        }
+        document.getElementById("btn2").onclick=function(){
+            document.getElementById("2").style.backgroundColor="green"
+            
+        }
+            
+    </script>
+</body>
+</html>
