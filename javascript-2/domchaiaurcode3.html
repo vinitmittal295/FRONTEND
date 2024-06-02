@@ -10,14 +10,14 @@
         <li>javascript</li>
     </ul>
     <script>
-        function addLanguage(LangName){
-            const li=document.createComment('li');
-            li.innerHTML=`${LangName}`
-            document.querySelector('.language').
-            appendChild(li)
-        }   
-        addLanguage("python")
-        addLanguage("java")
+        // function addLanguage(LangName){
+        //     const li=document.createComment('li');
+        //     li.innerHTML=`${LangName}`
+        //     document.querySelector('.language').
+        //     appendChild(li)
+        // }   
+        // addLanguage("python")
+        // addLanguage("java")
         function addOptilanguage(LangName){
             const li=document.createComment('li')
             // const addText=document.createTextNode(LangName)
@@ -26,6 +26,12 @@
             document.querySelector('.language').appendChild(li)
         }
         addOptilanguage('golang')
+
+        //edit
+        const secondLang=document.querySelector("li:nth-child(2)")
+        const nweli=document.createElement('li')
+        newli.textContent="mojo"
+        secondLang.replaceWith(newli)
     </script>
 </body>
 </html>
