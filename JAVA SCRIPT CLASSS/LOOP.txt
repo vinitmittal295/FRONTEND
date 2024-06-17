@@ -8,6 +8,7 @@ Q!) find the prime number
     }
     if(flag==0){
         console.log("prime")
+        
     }
     else{
         console.log("not prime")
