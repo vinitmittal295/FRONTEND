@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let prom=fetch('https://jsonplaceholder.typicode.com/posts')
+        // // console.log(prom)
+        // prom.then((item)=>{
+        //     // console.log(item)
+        //     item.json().then((item)=>{
+        //         // console.log(item)
+        //         for(let i of item){
+        //             console.log(i.id)
+        //             console.log(i.title)
+        //         }
+        //     })
+        // })
+
+
+        // let prom=fetch('https://jsonplaceholder.typicode.com/posts')
+        // // console.log(prom)
+        // prom.then((item)=>{
+        //     console.log(item)
+        //     // item show krega
+        //     console.log(item.status)
+        //     // item me status show krega
+        //     console.log(item.json())
+        //     // item ki json file show krega jo ek promise return krti h
+        //     // isliyen ispe b then use krenge
+
+        //     item.json().then((item)=>{
+        //         console.log(item)
+        //         for(let i of item){
+        //             console.log(i.id)
+        //             // json ki item ki id nikalenge isse
+        //             console.log(i.title)
+        //         }
+        //     })
+        // })
+
+         let prom=fetch('https://jsonplaceholder.typicode.com/posts')
+        // console.log(prom)
+        prom.then((item)=>{
+            // console.log(item)
+            item.json().then((data)=>{
+                console.log(data.products)
+            })
+        })
+    </script>
+</body>
+</html>

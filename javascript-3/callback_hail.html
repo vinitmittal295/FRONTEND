@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function food(dish){
+            setTimeout(()=>{
+                console.log(dish)
+            })
+        }
+        food("pizza")
+
+        // this is normal condition
+
+        function food(dish,order){
+            setTimeout(()=>{
+                console.log(dish)
+                order()
+            })
+        }
+        food("pizza",()=>{
+            food("burger")
+        })
+        // this is normal call_back hail 
+        function food(dish,order){
+            setTimeout(()=>{
+                console.log(dish)
+                order()
+            },2000)
+        }
+        food("pizza",()=>{
+            food("burger",()=>{
+                food("patties",()=>{
+                    food("cold drink")
+                })
+            })
+        })
+        // this is complex call_back_hail
+
+
+
+
+    </script>
+</body>
+</html>

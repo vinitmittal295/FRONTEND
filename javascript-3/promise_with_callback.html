@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // promise explainantion
+        // let prom= new Promise((resolve,reject)=>{
+        //     if(true){
+        //         resolve("proimise done")
+        //     }
+        //     else{
+        //         reject("not done promise")
+        //     }
+        // })
+        // prom.then((result)=>{
+        //      console.log(result)
+        //     result()
+        // }).catch((error)=>{
+        //     console.log(error)
+        // })
+
+        // primise with food problem
+
+        function food(dish){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve(dish)
+                },3000)
+            })
+        }
+        food("pizza").then((item)=>{
+            console.log(item)
+            food("burger").then((item)=>{
+                console.log(item)
+                food("cold").then((item)=>{
+                    console.log(item)
+                })
+            })
+
+        })
+
+
+
+
+    </script>
+</body>
+</html>

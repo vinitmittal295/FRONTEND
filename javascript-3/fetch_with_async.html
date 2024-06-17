@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // async function dataApi(){
+        //     let data= await fetch('https://dummyjson.com/docs/users')
+        //      let jsonData=await data.json()
+        //      console.log(jsonData)
+        //     // jsonData.users.map((item)=>{
+        //     // console.log(item)
+
+        // // })
+
+        // }
+        // dataApi()
+        async function vinit(){
+            let data= await fetch('https://dummyjson.com/docs/users')
+            let b= await data.json()
+            // console.log(b)
+            b.users.filter(()=>{
+                console.log(item)
+                // this will give true false
+
+            })
+            let d=b.users.filter((item)=>{
+                return item.age>25
+            
+            })
+            console.log(d)
+
+        }
+        vinit()
+
+        
+    </script>
+</body>
+</html>
