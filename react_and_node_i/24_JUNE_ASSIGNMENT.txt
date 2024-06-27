@@ -32,16 +32,103 @@ const main = () => {
 main();
 
 
-Question 2
-User se 6 input lena hai, inka maximum nikalna hai. Agar maximum > 75 hota hai to ek function call karna hai, jisme maximum aur 2 user inputs ko subtract karna hai aur result return karna hai. Agar result negative hai to absolute value nikal kar factorial return karna hai.
-User se 3 input lena hai, inka sum nikalna hai. Agar sum 0 hota hai to ek function call karna hai aur check karna hai ki wo perfect square hai ya nahi. Agar perfect square hai to uska square root nikalna hai aur result return karna hai.
-
 Question 3
-User se 5 input lena hai, inka average nikalna hai. Agar average > 60 hai to ek function call karna hai, jisme 3 input lena hai aur unka product return karna hai. Agar product even hai to uska half return karna hai, agar odd hai to uska double return karna hai.
+User se 6 input lena hai, inka maximum nikalna hai. Agar maximum > 75 hota hai to ek function call karna hai, jisme maximum aur 2 user inputs ko subtract karna hai aur
+ result return karna hai. Agar result negative hai to absolute value nikal kar factorial return karna hai.
 
-User se 4 input lena hai, inka minimum nikalna hai. Agar minimum < 10 hai to ek function call karna hai aur minimum ko 5 se multiply karna hai aur result return karna hai. Agar result > 50 hai to factorial nikalna hai aur result return karna hai.
+function maxsub(n1,n2,n3){
+    let p=4;
+    let q=4;
+    return n1-p-q 
+}
+function facti(n){
+    let fact2=1;
+    for(let i=0; i<n; i++){
+        fact2=fact2*i;
+    }
+    return fact2
+}
+
+function main(){
+    let a=1;
+    let b=2;
+    let c=4;
+    let d=4;
+    let e=5;
+    let f=-15;
+    let max=a;
+    if(b>max){
+        max=b;
+    }
+    if(c>max){
+        max=c;
+    }
+    if(d>max){
+        max=d;
+    }
+    if(e>max){
+        max=e
+    }
+    if(f>max){
+        max=f
+    }
+    console.log(max)
+    if(max>0){
+        let result =maxsub(max)
+        console.log(result)
+        if(result<0){
+            let absoluteValue=Math.abs(result)
+            let fact=facti(absoluteValue)
+            return fact
+        }
+    }
+}
+let ans=main()
+console.log(ans)
+
 
 Question 4
+User se 3 input lena hai, inka sum nikalna hai. Agar sum 0 hota hai to ek function call karna hai aur check karna hai ki wo perfect square hai ya nahi. Agar perfect 
+square hai to uska square root nikalna hai aur result return karna hai.
+
+Question 5
+User se 5 input lena hai, inka average nikalna hai. Agar average > 60 hai to ek function call karna hai, jisme 3 input lena hai aur unka product return karna hai.
+ Agar product even hai to uska half return karna hai, agar odd hai to uska double return karna hai.
+
+function mulproduct(){
+    let p=10;
+    let q=20;
+    let r=30;
+    return p*q*r
+}
+function main(){
+    let a=100;
+    let b=200;
+    let c=30;
+    let d=40;
+    let e=25;
+    let avg=(a+b+c+d+e)/5
+    if(avg>60){
+        let pro=mulproduct()
+        if(pro%2==0){
+            return pro/2;
+        }
+        else{
+            return pro*2
+        }
+    }
+    else{
+        console.log("less than 60")
+    }
+}
+let a=main()
+console.log(a)
+
+
+User se 4 input lena hai, inka minimum nikalna hai. Agar minimum < 10 hai to ek function call karna hai aur minimum ko 5 se multiply karna hai aur result return karna
+ hai. Agar result > 50 hai to factorial nikalna hai aur result return karna hai.
+
+Question 5
 User se 3 input lena hai, unka sum nikalna hai. Agar sum > 80 hai to ek function call karna hai, jisme 2 input lena hai aur unka division result return karna hai. Agar result integer hai to us integer ka reverse return karna hai.
 
 User se 2 input lena hai, inka difference nikalna hai. Agar difference < 0 hai to absolute value return karna hai. Agar difference even hai to ek function call karna hai aur us value ka cube return karna hai.
