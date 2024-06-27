@@ -1,6 +1,6 @@
 Question 1
 User se 4 input lena hai, inka sum nikalna hai. Agar sum > 100 hota hai to ek function call karna hai, jisme 3 input lena hai aur unka average return karna hai. Agar returned average > 50 hai to ek aur function call karke factorial nikalna hai aur check karna hai wo prime number hai ya nahi.
-
+Question 1
 User se 2 input lena hai, inka product nikalna hai. Agar product < 50 hota hai to ek function call karna hai, jisme product aur ek user input ko add karna hai aur result ko return karna hai. Agar returned value odd hai to ek aur function call karke us value ko square karna hai aur result return karna hai.
 
 const add = (a, p) => {
@@ -32,7 +32,7 @@ const main = () => {
 main();
 
 
-Question 3
+Question 2
 User se 6 input lena hai, inka maximum nikalna hai. Agar maximum > 75 hota hai to ek function call karna hai, jisme maximum aur 2 user inputs ko subtract karna hai aur
  result return karna hai. Agar result negative hai to absolute value nikal kar factorial return karna hai.
 
@@ -87,11 +87,11 @@ let ans=main()
 console.log(ans)
 
 
-Question 4
+Question 2
 User se 3 input lena hai, inka sum nikalna hai. Agar sum 0 hota hai to ek function call karna hai aur check karna hai ki wo perfect square hai ya nahi. Agar perfect 
 square hai to uska square root nikalna hai aur result return karna hai.
 
-Question 5
+Question 3
 User se 5 input lena hai, inka average nikalna hai. Agar average > 60 hai to ek function call karna hai, jisme 3 input lena hai aur unka product return karna hai.
  Agar product even hai to uska half return karna hai, agar odd hai to uska double return karna hai.
 
@@ -124,14 +124,98 @@ function main(){
 let a=main()
 console.log(a)
 
+Question 3
 
 User se 4 input lena hai, inka minimum nikalna hai. Agar minimum < 10 hai to ek function call karna hai aur minimum ko 5 se multiply karna hai aur result return karna
  hai. Agar result > 50 hai to factorial nikalna hai aur result return karna hai.
 
-Question 5
-User se 3 input lena hai, unka sum nikalna hai. Agar sum > 80 hai to ek function call karna hai, jisme 2 input lena hai aur unka division result return karna hai. Agar result integer hai to us integer ka reverse return karna hai.
+function minmul(a){
+    return a*5
+}
+function main(){
+    let a=5;
+    let b=20;
+    let c=30;
+    let d=40;
+    let min=a;
+    if(b<min){
+        min=b;
+    }
+    if(c<min)
+        min=c;
+    if(d<min)
+        min=d;
+    console.log(min)
+    if(min<10){
+        let res=minmul(min)
+        console.log(res)
+    }
+}
+main()
 
-User se 2 input lena hai, inka difference nikalna hai. Agar difference < 0 hai to absolute value return karna hai. Agar difference even hai to ek function call karna hai aur us value ka cube return karna hai.
+Question 4
+
+User se 3 input lena hai, unka sum nikalna hai. Agar sum > 80 hai to ek function call karna hai, jisme 2 input lena hai aur unka division result return karna hai.
+ Agar result integer hai to us integer ka reverse return karna hai.
+
+
+
+function div(){
+    let p=40;
+    let q=20;
+    return parseInt(p/q)
+
+}
+function reverse(n){
+    let sum,rem=0;
+    while(n>0){
+        rem=n%10;
+        sum=parseInt(sum*10+rem);
+        n=parseInt(n/10)
+    }
+    return sum
+}
+function main(){
+    let b=30;
+    let c=40;
+    let d=50;
+    let sum=b+c+d;
+    if(sum>80){
+        let res=div()
+        console.log(res)
+        let rev=reverse(res)
+        console.log(rev)
+    }
+
+}
+main()
+
+
+Question 4
+User se 2 input lena hai, inka difference nikalna hai. Agar difference < 0 hai to absolute value return karna hai.
+ Agar difference even hai to ek function call karna hai aur us value ka cube return karna hai.
+
+
+
+function cube(n){
+    return n*n*n
+}
+
+function main(){
+    let b=40;
+    let c=30;
+    let diff=b-c;
+    if(diff<0){
+        let res=Math.abs(diff)
+        console.log(res)
+    }
+    if(diff%2==0){
+        let c=cube(diff)
+        console.log(c)
+    }
+
+}
+main()
 
 Question 5
 User se 4 input lena hai, inka product nikalna hai. Agar product > 1000 hai to ek function call karna hai, jisme product aur ek user input ko divide karna hai aur result return karna hai. Agar result fraction hai to uska ceiling value return karna hai.
