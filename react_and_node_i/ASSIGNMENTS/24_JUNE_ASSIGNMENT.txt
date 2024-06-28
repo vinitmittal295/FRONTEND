@@ -217,8 +217,12 @@ function main(){
 }
 main()
 
+
 Question 5
-User se 4 input lena hai, inka product nikalna hai. Agar product > 1000 hai to ek function call karna hai, jisme product aur ek user input ko divide karna hai aur result return karna hai. Agar result fraction hai to uska ceiling value return karna hai.
+
+User se 4 input lena hai, inka product nikalna hai. Agar product > 1000 hai to ek function call karna hai, jisme product aur ek user input ko divide karna hai aur 
+result return karna hai. Agar result fraction hai to uska ceiling value return karna hai.
+Question 5
 
 User se 3 input lena hai, inka average nikalna hai. Agar average < 25 hai to ek function call karna hai aur check karna hai ki wo prime number hai ya nahi. Agar prime hai to uska factorial return karna hai.
 
