@@ -1,0 +1,78 @@
+1. create an object of user as created in mongodb and you have to pass that object in function and print all its values by destructing it.
+
+const data = {
+    _id: "123",
+    name: "vinit mittal",
+    email: "vinitmittal23.com",
+    age: 30,
+  };
+
+  function add({ _id, name, email, age }) {
+    console.log(`name is ${name} , email is ${email}, and age is ${age}`);
+  }
+  add(data);
+
+  
+  
+2. without destructing
+const data = {
+    _id: "123",
+    name: "vinit mittal",
+    email: "vinitmittal23.com",
+    age: 30,
+  };
+
+  function add(data) {
+    console.log(`name is ${data.name} , email is ${data.email}, and age is ${data.age}`);
+  }
+  add(data);
+
+
+
+  
+  
+3.you have to use the mongodb user dataset to pass object in function now from that function you have to pass the skills key pass as object to another function print 
+all its skills.using foreach method
+
+
+function function2(skills){
+    skills.forEach((skill)=>{
+        console.log(skill)
+    })
+}
+const data = {
+    skills:["java", "python","cpp"]
+  };
+
+  function add({skills}) {
+    function2(skills)
+  }
+  add(data);
+
+
+
+  
+  
+
+4. you have to use the mongodb user dataset to pass object in function now from that function you have to pass the skills key pass as object to another function
+ print all its skills using this method.
+
+function function2(skills){
+    const [a,b,c]=skills
+    console.log(a)
+    console.log(b)
+    console.log(c)
+}
+const data = {
+    skills:["java", "python","cpp"]
+  };
+
+  function add({skills}) {
+    function2(skills)
+  }
+  add(data);
+
+
+
+  
+  
