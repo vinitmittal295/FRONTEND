@@ -24,7 +24,6 @@ function function1({street,location,pincode}){
         const a=[];
         a.push(street,location, pincode)
         console.log(a)
-
         function4(a)
 }
 
