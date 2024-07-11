@@ -1,0 +1,294 @@
+1.Sum all the numbers in an array using the method.
+
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.reduce((a, b) => {
+  return a + b;
+}, 0);
+
+console.log(sum);
+
+2.Find the largest number in an array using the method.
+const values = [1, 2, 3, 4, 5, 10, 6];
+
+const maxNumber = values.reduce((maxSoFar, currentValue) => {
+  return currentValue > maxSoFar ? currentValue : maxSoFar;
+}, values[0]);
+
+console.log(maxNumber);
+3.Count the number of elements in an array using the reduce method.
+
+const elements = [1, 2, 3, 4, 5, 10, 6];
+
+const count = elements.reduce((accumulator) => {
+  return accumulator + 1;
+}, 0);
+
+console.log(count);
+4.Multiply all the numbers in an array using the method.
+
+const numbers = [1, 2, 3, 4, 5];
+
+const product = numbers.reduce((accumulator, currentValue) => {
+  return accumulator * currentValue;
+}, 1);
+
+console.log(product); 
+5.Find the smallest number in an array using the method.
+
+const values = [1, 2, 3, 4, 5, 10, 6];
+
+const minNumber = values.reduce((minSoFar, currentValue) => {
+  return currentValue < minSoFar ? currentValue : minSoFar;
+}, values[0]);
+
+console.log(minNumber);
+
+6.Create an object representing a person with properties,email. Destructure these properties into separate variables and log them to the console.
+
+const person = {
+  name: "John Doe",
+  age: 30,
+  email: "johndoe@example.com"
+};
+const { name, age, email } = person;
+
+
+console.log(name);  
+console.log(age);  
+console.log(email);
+
+7.Create an object representing a book with properties,,author andyear. Destructure these properties and log them to the console.
+
+const book = {
+  title: "To Kill a Mockingbird",
+  author: "Harper Lee",
+  year: 1960
+};
+
+const { title, author, year } = book;
+
+console.log(title);  
+console.log(author); 
+console.log(year);  
+
+8.Create an object representing a product with properties,,name andprice. Destructure these properties into separate variables and log them to the console.
+
+const product = {
+  id: 12345,
+  name: "Laptop",
+  price: 999.99
+};
+
+
+const { id, name, price } = product;
+
+
+console.log(id);    // Output: 12345
+console.log(name);  // Output: Laptop
+console.log(price); // Output: 999.99
+
+9.Create an object representing a car with propertiesyear. Destructure these properties into separate variables and log them to the console.
+
+
+const car = {
+  make: "Toyota",
+  model: "Camry",
+  year: 2021
+};
+
+
+const { make, model, year } = car;
+
+// Logging the destructured variables to the console
+console.log(make);  
+console.log(model); 
+console.log(year); 
+
+10.Write a function that accepts an object with propertiesemail, and destructures these properties to return a string in the format "Name: [name], Age: [age], Email: [email]".
+
+function formatPersonDetails({ name, age, email }) {
+  return `Name: ${name}, Age: ${age}, Email: ${email}`;
+}
+
+// Example usage:
+const person = {
+  name: "John Doe",
+  age: 30,
+  email: "johndoe@example.com"
+};
+
+const formattedDetails = formatPersonDetails(person);
+console.log(formattedDetails); // Output: Name: John Doe, Age: 30, Email: johndoe@example.com
+
+11.Write a function that accepts an object with properties,,author, andyear, and destructures these properties to log each property to the console.
+
+function logBookDetails({ title, author, year }) {
+  console.log(`Title: ${title}`);
+  console.log(`Author: ${author}`);
+  console.log(`Year: ${year}`);
+}
+
+// Example usage:
+const book = {
+  title: "To Kill a Mockingbird",
+  author: "Harper Lee",
+  year: 1960
+};
+
+logBookDetails(book);
+
+
+
+12.Write a function that accepts an object with properties,,name, andprice, and destructures these properties to return an object with only the name and price properties.
+
+function extractNameAndPrice({ name, price }) {
+  return { name, price };
+}
+
+
+const product = {
+  id: 12345,
+  name: "Laptop",
+  price: 999.99
+};
+
+const { name, price } = extractNameAndPrice(product);
+console.log(name);  
+console.log(price); 
+
+
+13.Write a function that accepts an object with propertiesyear, and destructures these properties to return a string describing the car in the format "[year] [make] [model]".
+function describeCar({ year, make, model }) {
+  return `${year} ${make} ${model}`;
+}
+
+// Example usage:
+const car = {
+  year: 2021,
+  make: "Toyota",
+  model: "Camry"
+};
+
+const description = describeCar(car);
+console.log(description); // Output: 2021 Toyota Camry
+
+
+14.Write a function called introducePerson that accepts an object with properties,,age, andemail. Destructure these properties inside the function and return a string in the format "Hi, my name is [name], I am [age] years old, and you can contact me at [email]". The function should handle cases where the properties might be missing by using default values ("Unknown" for and 0 forage).
+
+
+function introducePerson({ name = "Unknown", age = 0, email = "Unknown" }) {
+  return `Hi, my name is ${name}, I am ${age} years old, and you can contact me at ${email}.`;
+}
+
+// Example usage:
+const person1 = {
+  name: "John Doe",
+  age: 30,
+  email: "johndoe@example.com"
+};
+console.log(introducePerson(person1)); // Output: Hi, my name is John Doe, I am 30 years old, and you can contact me at johndoe@example.com.
+
+const person2 = {
+  age: 25
+};
+console.log(introducePerson(person2)); // Output: Hi, my name is Unknown, I am 25 years old, and you can contact me at Unknown.
+
+const person3 = {
+  email: "janedoe@example.com"
+};
+console.log(introducePerson(person3)); // Output: Hi, my name is Unknown, I am 0 years old, and you can contact me at janedoe@example.com.
+
+15.Write a function called describeBook that accepts an object with properties,,author, andyear. Destructure these properties inside the function and log a message to the console in the format "The book '[title]' was written by [author] and published in [year]". Handle cases where any of the properties might be missing by using default values ("Unknown Title" fortitle, "Unknown Author" forauthor, and "Unknown Year" foryear).
+
+function describeBook({ title = "Unknown Title", author = "Unknown Author", year = "Unknown Year" }) {
+  console.log(`The book '${title}' was written by ${author} and published in ${year}.`);
+}
+
+// Example usage:
+const book1 = {
+  title: "To Kill a Mockingbird",
+  author: "Harper Lee",
+  year: 1960
+};
+describeBook(book1); // Output: The book 'To Kill a Mockingbird' was written by Harper Lee and published in 1960.
+
+const book2 = {
+  title: "1984",
+  author: "George Orwell"
+};
+describeBook(book2); // Output: The book '1984' was written by George Orwell and published in Unknown Year.
+
+const book3 = {
+  author: "J.K. Rowling",
+  year: 1997
+};
+describeBook(book3); // Output: The book 'Unknown Title' was written by J.K. Rowling and published in 1997.
+
+const book4 = {
+  // No properties provided
+};
+describeBook(book4); // Output: The book 'Unknown Title' was written by Unknown Author and published in Unknown Year.
+
+16Write a function called displayProductInfo that accepts an object with properties,,name, andprice. Destructure these properties inside the function and return a string in the format "Product [name] (ID: [id]) costs $[price]". The function should handle cases where any of the properties might be missing by using default values ("Unknown ID" forid, "Unknown Name" forname, and 0 forprice).
+
+function displayProductInfo({ id = "Unknown ID", name = "Unknown Name", price = 0 }) {
+  return `Product ${name} (ID: ${id}) costs $${price}`;
+}
+
+// Example usage:
+const product1 = {
+  id: 12345,
+  name: "Laptop",
+  price: 999.99
+};
+console.log(displayProductInfo(product1)); // Output: Product Laptop (ID: 12345) costs $999.99
+
+const product2 = {
+  id: 54321,
+  name: "Keyboard"
+};
+console.log(displayProductInfo(product2)); // Output: Product Keyboard (ID: 54321) costs $0
+
+const product3 = {
+  name: "Monitor",
+  price: 399.99
+};
+console.log(displayProductInfo(product3)); // Output: Product Monitor (ID: Unknown ID) costs $399.99
+
+const product4 = {
+  // No properties provided
+};
+console.log(displayProductInfo(product4)); // Output: Product Unknown Name (ID: Unknown ID) costs $0
+
+
+17.Write a function called carDescription that accepts an object with properties,,model, andyear. Destructure these properties inside the function and return a string in the format "This car is a [year] [make] [model].". Handle cases where any of the properties might be missing by using default values ("Unknown Make" formake, "Unknown Model" formodel, and "Unknown Year" foryear).
+
+function carDescription({ make = "Unknown Make", model = "Unknown Model", year = "Unknown Year" }) {
+  return `This car is a ${year} ${make} ${model}.`;
+}
+
+// Example usage:
+const car1 = {
+  make: "Toyota",
+  model: "Camry",
+  year: 2021
+};
+console.log(carDescription(car1)); // Output: This car is a 2021 Toyota Camry.
+
+const car2 = {
+  make: "Honda",
+  year: 2018
+};
+console.log(carDescription(car2)); // Output: This car is a 2018 Honda Unknown Model.
+
+const car3 = {
+  model: "Civic",
+  year: 2015
+};
+console.log(carDescription(car3)); // Output: This car is a 2015 Unknown Make Civic.
+
+const car4 = {
+  // No properties provided
+};
+console.log(carDescription(car4)); // Output: This car is a Unknown Year Unknown Make Unknown Model.
