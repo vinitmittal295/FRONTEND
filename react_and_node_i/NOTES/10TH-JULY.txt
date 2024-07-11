@@ -1,0 +1,20 @@
+JavaScript is considered as Single Threaded application
+becuase it has single call stack matlab ek bar mai ek hi piece of code run kar sakta hai.
+
+Event loop :
+non blocking operation, code rukta nahi hai jab function call hota hai
+when asynchronous operation is initiated JavaScript can continues excuting other codes while waiting for the 
+asynchronous code to complete
+
+
+callback queues
+jab asynchronous operation complete ho jata hai it is placed in the callback queue, event loop bar bar check kar
+ karta hai ki call stack 
+empty hai ya nahi hai,
+
+
+promises or async await
+built on the top of promises allows asynchronous programming.
+
+web apis
+http req, dom events
