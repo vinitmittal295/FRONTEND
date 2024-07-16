@@ -1,0 +1,266 @@
+jsonplaceholder.typicode.com/users
+
+
+1)Data fetch hone ke baad, users ka ek naya array banao jo city "South Christy" mein rehte hain using filter method
+async function fetchAndProcessUsers() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+    const southChristyUsers = users.filter(user => user.address.city === "South Christy");
+    console.log('Users in South Christy:', southChristyUsers);
+
+} catch (error) {
+  console.error('Error fetching users:', error);
+}
+}
+
+fetchAndProcessUsers();
+
+2)Data fetch hone ke baad, users ka ek naya array banao jinka company name "Romaguera-Crona" hai using filter 
+method.
+
+async function fetchAndProcessUsers() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+    const romagueraCronaUsers = users.filter(user => user.company.name === "Romaguera-Crona");
+    console.log('Users with company Romaguera-Crona:', romagueraCronaUsers);
+
+} catch (error) {
+  console.error('Error fetching users:', error);
+}
+}
+
+fetchAndProcessUsers();
+
+3) Data fetch hone ke baad, users ka array se 3 users ko remove karo starting from index 2 using splice method.
+
+async function fetchAndProcessUsers() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+
+    const usersCopy = [...users];
+    usersCopy.splice(2, 3);
+    console.log('Users after removing 3 users starting from index 2:', usersCopy);
+
+}
+
+catch (error) {
+  console.error('Error fetching users:', error);
+}
+}
+
+fetchAndProcessUsers();
+
+4)Data fetch hone ke baad, pehle user ka name extract karo using object destructuring.
+async function fetchAndProcessUsers() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+
+    const [{ name: firstName }] = users;
+yha zero index le rha h 
+    console.log('First user name:', firstName);
+
+}
+
+catch (error) {
+  console.error('Error fetching users:', error);
+}
+}
+
+fetchAndProcessUsers();
+
+5) Data fetch hone ke baad, user jiska id 3 hai, uska address extract karo using object destructuring.
+async function fetchAndProcessUsers() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+
+    const { address: user3Address } = users.find(user => user.id === 3);
+    console.log('Address of user with id 3:', user3Address);
+
+}
+
+catch (error) {
+  console.error('Error fetching users:', error);
+}
+}
+fetchAndProcessUsers();
+
+6) Data fetch hone ke baad, user jiska id 3 hai, uska address ki street extract karo using object destructuring.
+
+async function vinit(){
+  const data=await fetch('https://jsonplaceholder.typicode.com/users')
+  const user= await data.json()
+  const { address: { street }}=user.find(b=>b.id===3)
+console.log(street)
+}
+vinit()
+
+or 
+
+async function fetchAndProcessUsers() {
+  try {
+    // Fetch the users data from the API
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+
+    // Find the user with id 3
+    const userWithId3 = users.find(user => user.id === 3);
+
+    // Extract the street from the address of the user with id 3 using object destructuring
+    const { address: { street } } = userWithId3;
+    console.log('Street of user with id 3:', street);
+
+  } catch (error) {
+    console.error('Error fetching users:', error);
+  }
+}
+
+// Call the function to fetch and process the users data
+fetchAndProcessUsers();
+
+6) Data fetch hone ke baad, pehle user ka email extract karo using object destructuring.
+
+async function fetchAndProcessUsers() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+
+    const [{ email: firstUserEmail }] = users;
+    console.log('First user email:', firstUserEmail);
+
+}
+
+catch (error) {
+  console.error('Error fetching users:', error);
+}
+}
+fetchAndProcessUsers();
+
+7)Data fetch hone ke baad, aakhri user ka website extract karo using object destructuring.
+
+async function fetchAndProcessUsers() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+
+    const { website: lastUserWebsite } = users[users.length - 1];
+    console.log('Last user website:', lastUserWebsite);
+
+}catch (error) {
+  console.error('Error fetching users:', error);
+}
+}
+fetchAndProcessUsers();
+
+8)Data fetch hone ke baad, users ka ek naya array banao jo pehle 5 users ko contain karta ho using slice method.
+
+async function fetchAndProcessUsers() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+
+    const first5Users = users.slice(0, 5);
+    console.log('First 5 users:', first5Users);
+
+}catch (error) {		
+  console.error('Error fetching users:', error);
+}
+}
+fetchAndProcessUsers();
+
+9)Data fetch hone ke baad, users ka name ka ek naya array banao using reduce method.
+
+async function fetchAndProcessUsers() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+
+    const userNames = users.reduce((names, user) => {
+      names.push(user.name);
+      return names;
+    }, []);
+    console.log('User names:', userNames);
+
+}catch (error) {
+  console.error('Error fetching users:', error);
+}
+}
+fetchAndProcessUsers();
+10)Data fetch hone ke baad, users ka ek naya array banao jo users ke email contain karta ho
+ jin ka address.zipcode "92998-3874" hai using filter and map methods.
+
+
+async function fetchAndProcessUsers() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+
+    const specificZipEmails = users
+      .filter(user => user.address.zipcode === "92998-3874")
+      .map(user => user.email);
+    console.log('Emails of users with zipcode 92998-3874:', specificZipEmails);
+
+}catch (error) {
+  console.error('Error fetching users:', error);
+}
+}
+fetchAndProcessUsers();
+
+11)Data fetch hone ke baad, users ka website ka ek naya array banao using map method.
+
+
+async function fetchAndProcessUsers() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+
+    const userWebsites = users.map(user => user.website);
+    console.log('User websites:', userWebsites);
+
+}catch (error) {
+  console.error('Error fetching users:', error);
+}
+}
+fetchAndProcessUsers();
+
+
+12)Data fetch hone ke baad, users ka array mein se un users ko remove karo jo city "Kulas Light" mein rehte hain
+ using filter and splice methods.
+
+async function fetchAndProcessUsers() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+
+    const usersWithoutKulasLight = users.filter(user => user.address.city !== "Kulas Light");
+    console.log('Users after removing those in Kulas Light:', usersWithoutKulasLight);
+
+}catch (error) {
+  console.error('Error fetching users:', error);
+}
+}
+fetchAndProcessUsers();
+
+13)Data fetch hone ke baad, users ka ek naya array banao jo unke address ko full address string mein convert karta
+ ho using map method.
+
+async function fetchAndProcessUsers() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+
+    const fullAddressUsers = users.map(user => {
+      const { street, suite, city, zipcode } = user.address;
+      return `${street}, ${suite}, ${city}, ${zipcode}`;
+    });
+    console.log('Users with full address strings:', fullAddressUsers);
+
+}catch (error) {
+  console.error('Error fetching users:', error);
+}
+}
+fetchAndProcessUsers();

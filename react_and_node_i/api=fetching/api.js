@@ -86,3 +86,54 @@
 // }
 // }
 // vinit()
+
+// async function vinit(){
+//   const data=await fetch('https://jsonplaceholder.typicode.com/users')
+//   const user=await data.json()
+//   // console.log(user)
+//   const a=[...user]
+//   const b=user.splice(2,6)
+//   console.log(b)
+// }
+// vinit()
+
+// async function fetchAndProcessUsers() {
+//   try {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/users');
+//     const users = await response.json();
+
+//     const [{ name: r}] = users;
+//     console.log('First user name:', r);
+
+// }
+
+// catch (error) {
+//   console.error('Error fetching users:', error);
+// }
+// }
+// fetchAndProcessUsers()
+
+
+// async function fetchAndProcessUsers() {
+//   try {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/users');
+//     const users = await response.json();
+
+//     const first5Users = users.slice(0, 5);
+//     console.log('First 5 users:', first5Users);
+
+// }catch (error) {
+//   console.error('Error fetching users:', error);
+// }
+// }
+// fetchAndProcessUsers();
+
+async function vinit(){
+  const d=await fetch('https://jsonplaceholder.typicode.com/users')
+  const e=await d.json()
+  const f=e.filter(a=>a.address.zipcode==="92998-3874")
+  .map(c=>c.email)
+  console.log(f)
+}
+vinit()
+
