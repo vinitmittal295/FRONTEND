@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+        // this is normal condition
         function food(dish){
             setTimeout(()=>{
                 console.log(dish)
@@ -14,8 +15,8 @@
         }
         food("pizza")
 
-        // this is normal condition
-
+        
+        // this is normal call_back hail 
         function food(dish,order){
             setTimeout(()=>{
                 console.log(dish)
@@ -25,7 +26,9 @@
         food("pizza",()=>{
             food("burger")
         })
-        // this is normal call_back hail 
+        
+
+        // this is complex call_back_hail
         function food(dish,order){
             setTimeout(()=>{
                 console.log(dish)
@@ -39,7 +42,7 @@
                 })
             })
         })
-        // this is complex call_back_hail
+        
 
 
 
