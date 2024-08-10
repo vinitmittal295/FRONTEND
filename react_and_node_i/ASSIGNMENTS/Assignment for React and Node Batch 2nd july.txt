@@ -174,7 +174,9 @@ const description = describeCar(car);
 console.log(description); // Output: 2021 Toyota Camry
 
 
-14.Write a function called introducePerson that accepts an object with properties,,age, andemail. Destructure these properties inside the function and return a string in the format "Hi, my name is [name], I am [age] years old, and you can contact me at [email]". The function should handle cases where the properties might be missing by using default values ("Unknown" for and 0 forage).
+14.Write a function called introducePerson that accepts an object with properties,,age, andemail. Destructure these properties inside the function and return a string 
+in the format "Hi, my name is [name], I am [age] years old, and you can contact me at [email]". The function should handle cases where the properties might be missing
+ by using default values ("Unknown" for and 0 forage).
 
 
 function introducePerson({ name = "Unknown", age = 0, email = "Unknown" }) {

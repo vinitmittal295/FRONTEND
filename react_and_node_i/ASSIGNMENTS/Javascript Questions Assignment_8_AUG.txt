@@ -1,0 +1,289 @@
+Question 1: var Declaration and Redeclaration
+Write a JavaScript code snippet that declares a variable using var, assigns it a value, redeclares it with a new value, and then logs the value to the console.
+
+var a= 10;
+var a = 20;
+console.log(a);
+
+Question 2: let Declaration and Redeclaration
+Write a JavaScript code snippet that declares a variable using let, assigns it a value, tries to redeclare it with a new value, and logs the output or error to the console.
+
+
+let a = 10;
+ a = 20;
+console.log(a);
+
+Question 3: const Declaration and Reassignment
+Write a JavaScript code snippet that declares a variable using const, assigns it a value, tries to reassign it with a new value, and logs the output or error to the console.
+cannot be reassignment and redecalration
+
+Question 4: Scope of var
+Write a JavaScript function that declares a variable using var inside a function, assigns it a value, and logs the value to the console both inside and outside the function to demonstrate scope behavior.
+
+function vinit() {
+    var a = 10;
+    console.log(a);
+}
+testVar(); this will be executed
+console.log(myVar) this will not be executed
+
+Question 5: Scope of let and const
+Write a JavaScript code snippet that declares variables using let and const inside a block (e.g., inside an if statement), assigns them values, and logs the values to the console both inside and outside the block to demonstrate scope behavior.
+
+if (true) {
+    let myLet = 10;
+    const myConst = 20;
+    console.log(myLet); 
+    console.log(myConst);
+}
+console.log(myLet);   // mylet is not in the scope
+console.log(myConst); // myconst is not in the scope
+
+Question 6: var Hoisting
+Write a JavaScript code snippet that demonstrates hoisting with a var variable. Declare and assign a value to the variable after logging it to the console. Observe and explain the output.
+
+console.log(myVar); // Output: undefined
+var myVar = 10;
+console.log(myVar); // Output: 10
+
+
+Question 7: let Hoisting
+Write a JavaScript code snippet that attempts to demonstrate hoisting with a let variable. Declare the variable after logging it to the console and observe the output. Explain why the output is different from var.
+
+console.log(a); // can not be hostd
+let a = 10;
+console.log(a); // Output: 10
+
+Question 8: const Hoisting
+Write a JavaScript code snippet that attempts to demonstrate hoisting with a const variable. Declare the variable after logging it to the console and observe the output. Explain the result.
+
+console.log(a); // can not be hostd
+let a = 10;
+console.log(a); // Output: 10
+Question 9: Function Hoisting
+Write a JavaScript code snippet that demonstrates hoisting with a function declaration. Call the function before it is declared in the code and log the result to the console.
+
+
+console.log(vinit())
+function vinit(){
+    return 10
+}
+
+
+Question 10: Variable and Function Hoisting
+Write a JavaScript code snippet that declares a var variable and a function with the same name. Log the value to the console before and after declaring both the variable and the function. Observe and explain the output
+.
+
+
+console.log(vinit())
+var a=10;
+console.log(a);
+console.log(vinit())
+function vinit(){
+    return 10
+}
+console.log(vinit())
+
+
+Question 11: Named Function
+Write a JavaScript named function called displayNumber that declares a variable, assigns it a value, logs the value to the console, and then calls the function.
+
+
+
+function vinit(){
+    return 10
+}
+console.log(vinit())
+
+Question 12: Anonymous Function
+Write a JavaScript anonymous function that declares a variable, assigns it a value, logs the value to the console, and explain why it cannot be called directly.
+
+const vinit = function(){
+    var a=10;
+    console.log(a)
+}
+vinit();
+
+Question 13: Function Expression
+Write a JavaScript function expression assigned to a constant called displayNumber that declares a variable, assigns it a value, logs the value to the console, and then calls the function.
+
+const vinit = function(){
+    var a=10;
+    console.log(a)
+}
+vinit();
+
+Question 14: Anonymous Arrow Function
+Write a JavaScript anonymous arrow function that declares a variable, assigns it a value, logs the value to the console, and explain why it cannot be called directly.
+
+
+const vinit =()=>{
+    const a=10;
+    console.log(a)
+}
+vinit();
+
+
+Question 15: Arrow Function Expression
+Write a JavaScript arrow function expression assigned to a constant called displayNumber that declares a variable, assigns it a value, logs the value to the console, and then calls the function.
+
+const vinit =()=>{
+    const a=10;
+    console.log(a)
+}
+vinit();
+
+
+Question 16: Named Function Hoisting
+Write a JavaScript code snippet that demonstrates calling a named function before it is declared. Declare the function after the call and observe the output. Explain why this works.
+
+console.log(vinit())
+function vinit(){
+    return 10
+}
+
+
+Question 17: Arrow Function Expression and Hoisting
+Write a JavaScript code snippet that attempts to call an arrow function expression before it is declared. Declare the arrow function expression after the call and observe the output. Explain why this does not work.
+
+vinit();
+const vinit =()=>{
+    const a=10;
+    console.log(a)
+}
+
+this will not work
+
+
+Question 18: Function Declaration vs. Function Expression
+Write a JavaScript code snippet that demonstrates the difference between function declaration and function expression in terms of hoisting. Create one named function and one function expression, call both before their declarations, and observe the output.
+
+
+vinit();
+console.log(mittal)  //output is 20
+console.log(vinit())  //there will be an error
+function mittal(){
+    return 20
+}
+const vinit =function()=>{
+    return 10;
+}
+
+
+
+Question 19: Hoisting with var and Function Expression
+Write a JavaScript code snippet that declares a variable using var and assigns it an arrow function expression. Attempt to call the function before the variable declaration and observe the output. Explain the behavior.
+
+
+ myFunc();
+
+var myFunc = () => {
+    console.log('Hello');
+};
+myFunc();
+
+Question 20: Combining Variable and Function Hoisting
+Write a JavaScript code snippet that combines variable and function hoisting. Declare a named function and a variable with the same name, call the function before and after declaring both the function and the variable, and observe the output. Explain the behavior.
+
+
+vinit();
+console.log(mittal)  //output is 20
+console.log(vinit())  //there will be an error
+function mittal(){
+    return 20
+}
+const vinit =function()=>{
+    return 10;
+}
+
+
+Question 21: Variable Scope and Function Calls
+Write a JavaScript code snippet that demonstrates the scope of a variable declared with var inside a function. Call the function and log the variable both inside and outside the function. Explain the output.
+
+
+
+function vinit(){
+    var a=10;
+    console.log(a)
+}
+console.log(vinit)
+console.log(a); //this will give error
+
+
+Question 22: Closure with Nested Functions
+Write a JavaScript code snippet that defines an outer function with a variable, declares an inner function that logs the variable, calls the inner function from within the outer function, and then calls the outer function. Explain the concept of closures based on the output.
+
+
+function outer(){
+    var outer=10;
+    function innner(){
+        console.log(outer);
+    }
+    innner();
+}
+outer();
+
+Question 23: Accessing Outer Function Variables
+Write a JavaScript code snippet where an outer function declares a variable, an inner function accesses and logs the variable, and then both functions are called. Show how the inner function can access the outer function's variable.
+
+
+function outer(){
+    var outer=10;
+    function innner(){
+        console.log(outer);
+    }
+    innner();
+}
+outer();
+
+
+Question 24: Closure with Parameterized Functions
+Write a JavaScript code snippet where an outer function takes a parameter and declares a variable, an inner function logs both the parameter and the variable, and the outer function calls the inner function. Call the outer function with different arguments and explain how closures work with parameters.
+
+function outer(a){
+    var outer=10;
+    function innner(){
+        console.log(outer);
+        console.log(a);
+    }
+    innner();
+}
+outer(5);
+
+Question 25: Returning Inner Function
+Write a JavaScript code snippet where an outer function declares a variable and returns an inner function that logs the variable. Assign the returned function to a variable, call it, and explain how the closure retains access to the outer function's variable even after the outer function has finished executing.
+
+function outer(a){
+    var outer=10;
+    return function (){
+        console.log(outer);
+        console.log(a);
+    }
+    // innner();
+}
+const inner=outer()
+inner();
+
+
+Question 26: Increment Counter using Closure
+Write a JavaScript code snippet that uses a closure to create a function incrementCounter. This function should have an internal counter variable and return another function that increments and logs the counter each time it is called. Show how the counter retains its value between calls.
+
+
+function incrementCounter() {
+    let counter = 0;
+    return function() {
+        counter++;
+        console.log(counter);
+    };
+}
+const counter1 = incrementCounter();
+counter1(); // Output: 1
+counter1(); // Output: 2
+Question 27: Encapsulated State with Closures
+Write a JavaScript code snippet that uses a closure to create a function createPerson. This function should accept a name and return an object with methods to get and set the name. Demonstrate how closures encapsulate the state of the name variable.
+Question 28: Private Methods using Closures
+Write a JavaScript code snippet that uses a closure to create a function createCounter. This function should return an object with methods to increment, decrement, and get the counter value. Ensure the counter variable is not directly accessible from outside the object.
+Question 29: Module Pattern using Closures
+Write a JavaScript code snippet that uses a closure to create a simple module for managing a list of items. The module should have methods to add, remove, and list items. Demonstrate how closures help maintain the list's state.
+Question 30: Closure with Timer Functions
+Write a JavaScript code snippet that demonstrates the use of a closure with a timer function. Create a function that logs a message after a delay, and use a closure to ensure that the message includes a variable from the outer scope
