@@ -1,16 +1,19 @@
-const express  =  require("express")
+import express from"express"
 
-const colors= require("colors")
+import colors from"colors"
+import dotenv from "dotenv"
 
+// configure env
+dotenv.config();
+
+const PORT=process.env.PORT || 8080
 const app=express()
 
 app.get('/',(req,res)=>{
-    res.send({
-        message:"welcome to ecommerce app"
-    })
+    res.send("<h1>welcome</h1>")
 })
 
-const PORT=8080
+
 
 app.listen(PORT,()=>{
     console.log(`server running on ${PORT}`.bgGreen.white)
