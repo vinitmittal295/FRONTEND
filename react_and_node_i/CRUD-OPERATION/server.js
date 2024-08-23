@@ -5,7 +5,7 @@ const port=3000
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-const mongourl="mongodb://localhost:27017/crud"
+const mongourl="mongodb+srv://vinitmittal295:1234@cluster0.yohx5ud.mongodb.net/crud"
 
 mongoose.connect(mongourl).then(()=>{
     console.log('<<<<<<<connected to mongodb')
@@ -13,7 +13,7 @@ mongoose.connect(mongourl).then(()=>{
 
 
 .catch((err)=>{
-    console.log('error connecting to momgodb')
+    console.log('error connecting to mongodb',err)
 })
 
 const userRoutes= require('./routers/user')
