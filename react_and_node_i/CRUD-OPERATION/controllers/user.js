@@ -16,3 +16,4 @@ exports.getAlluser=async(req,res)=>{
     const user=await User.find();
     res.status(201).json(user)
 }
+
