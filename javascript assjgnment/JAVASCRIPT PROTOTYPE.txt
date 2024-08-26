@@ -1,0 +1,1 @@
+Prototype are the mechanism by which javascript objects inherit features from one another
