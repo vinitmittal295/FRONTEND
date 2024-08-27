@@ -68,6 +68,8 @@ exports.userSignUp = async(req,res)=>{
 }
 
 
+
+
 exports.userLogin = async(req,res)=>{
     const {email, password,name} = req.body  
 
@@ -76,16 +78,12 @@ exports.userLogin = async(req,res)=>{
     }
 
     const existingUser = await User.findOne({email})
-    console.log(`>>>>>>>>>>>existingUser>>>>>>>>>`,existingUser);
 
     if(!(existingUser)){
         return res.status(400).json({message:"User not found"})
     }
 
     const match = await bcrypt.compare(password, existingUser.password);
-    console.log(">>>password>>",password)
-    console.log(">>>password>>",existingUser.password)
-    console.log(`>>>>>>>>match>>>>>>>>>>`,match);
 
     if(!match){
         return res.status(400).json({message:"Invalid password"})
