@@ -17,17 +17,12 @@ exports.CreateUser = async(req,res)=>{
 
 
 
-// exports.getAlluser=async(req,res)=>{
-//     const id=req.params.id
-//     const user=await User.find();
-//     res.status(201).json(user)
-// }
-
 exports.getAlluser=async(req,res)=>{
     const id=req.params.id
     const user=await User.find();
     res.status(201).json(user)
 }
+
 
 
 exports.getSingleUser = async(req,res)=>{
@@ -38,6 +33,9 @@ exports.getSingleUser = async(req,res)=>{
     }
     res.status(201).json(user)
 }
+
+
+
 exports.updateUser = async(req,res)=>{
     const id = req.body.id
     const data = req.body
@@ -45,11 +43,13 @@ exports.updateUser = async(req,res)=>{
     res.status(201).json(user)
 }
 
+
 exports.deleteRecord = async(req,res)=>{
     const id = req.params.id
     const user = await User.findByIdAndDelete(id);
     res.status(201).json(user)
 }
+
 exports.userSignUp = async(req,res)=>{
     const {email, password,name} = req.body
     const salt = bcrypt.genSaltSync(10);
@@ -66,6 +66,7 @@ exports.userSignUp = async(req,res)=>{
     await user.save();
     res.status(201).json(user)
 }
+
 
 exports.userLogin = async(req,res)=>{
     const {email, password,name} = req.body  
